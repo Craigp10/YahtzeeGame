@@ -1,6 +1,8 @@
 
 
 
+
+
 class Scoring:
     '''Class for scoring on each turn'''
     def __init__(self, player,dice_list):

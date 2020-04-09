@@ -4,6 +4,8 @@ import random
 
 import Scoring
 
+
+
 class Player:
     '''Player class for each player in Yahtzee game'''
     def __init__(self,name,score, scorecard):
