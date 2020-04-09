@@ -15,7 +15,7 @@ This is a command line python program and that can be played with any number of 
 
 #### To run locally
 
-- Run this command: git clone https://github.com/Craigp10/YahtzeeGame.git
+- Run this command: git clone '''https://github.com/Craigp10/YahtzeeGame.git'''
 
 - cd into the directory 'YahtzeeGame'
 
