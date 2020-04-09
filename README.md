@@ -3,13 +3,13 @@ This is a OOP Yahtzee game developed via python
 Besides the basic of programming everything I used
 in Python is self taught. So I'm constantly coming back and improving the program. If you find any improvements to make, feel free to contact me!
 
-###Task
+### Task
 Build OOP styled Yahtzee game to understand the fundamentals of Object Oriented Programming
 
-###Why?
+### Why?
 I initially built this yahtzee game after learning the basics of python, and quickly learned the advantages to working with classes from issues I faced while developing.
 
-###Summary
+### Summary
 This is a command line python program and that can be played with any number of players. It follows the typical Yahtzee game. Players enter their name at the start, and take turns rolling dice and picking scores based on their dice rolled. After the number of turns decided at the beginning, a winner will be calculated!
 
 
@@ -24,7 +24,7 @@ This is a command line python program and that can be played with any number of 
 - Happy playing!!
 
 
-####Tech Stack
+#### Tech Stack
 
 Python
 
