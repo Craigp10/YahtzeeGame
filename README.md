@@ -19,7 +19,7 @@ This is a command line python program and that can be played with any number of 
 
 - cd into the directory 'YahtzeeGame'
 
-- run this command: python game_manager.py
+- run this command: ```python game_manager.py```
 
 - Happy playing!!
 
