@@ -52,12 +52,14 @@ class Scoring:
         for i in range(len(player.scorecard)):
             if player.scorecard[i] in full_Dict:
                 score_Dict[player.scorecard[i]] = full_Dict[player.scorecard[i]]
-        print("You're Choices:",score_Dict)
+        print("You're Choices:")
+        [print(f"{score}: {score_Dict[score]}") for score in score_Dict]
+        # print("You're Choices:",[print(f"{x}: {score_Dict[x]}, \n" for x in score_Dict)])
         return score_Dict
 
     def PickScore(self):
         '''Take in score player chooses'''
-        choosenScore = input("What score would you like to choose? Enter exactly as seen above without quotes")
+        choosenScore = input("What score would you like to choose? Enter exactly as seen above without quotes \n")
         return choosenScore
 
     def CheckScore(self,player, dice_list,score_Dict):
@@ -82,12 +84,6 @@ class Scoring:
         used so we can keep choosen scores from displaying in future turns'''
         player.scorecard.remove(choosenScore)
         return player.scorecard
-
-    def findIndex(self, choosenScore):
-        '''Find the index of the choosen score'''
-        for i in range(len(self.scorecard)):
-            if self.scorecard[i] == choosenScore:
-                return i
 
     def RemoveRepeatDice(self,dice_list):
         '''Remove Any duplicate dice values in the list, used to measure the Straight Score'''

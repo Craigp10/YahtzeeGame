@@ -18,22 +18,21 @@ class Yahtzee:
         '''Start the game'''
         turn = 0
         game = 'inProgress'
-        rounds = int(input('How many rounds would you like to play? 1 to 13'))
-        if 0 > rounds or rounds > 13:
-            self.GameStart()
+        rounds = 0
+        while (1 > rounds or rounds > 13):
+            rounds = int(input('How many rounds would you like to play? 1 to 13 \n'))
         else:
             self.gameInProgress(self.players,rounds)
 
         return None
 
-    def gameInProgress(self,players,rounds):
+    def gameInProgress(self, players, rounds):
         '''Flow of game via while & for loop'''
         turn = 0
-        while turn < rounds:#change to 13 for full game
+        while turn < rounds:
             for player in players:
                 player.TakeTurn()
             turn += 1
-
         return None
 
     def decideWinner(self):
@@ -52,7 +51,7 @@ class Yahtzee:
                 tied_players = []
         if len(tied_players) > 0:
             print("WE HAVE A TIE, PLAY ROCK PAPER SCISSORS!")
-            leader['name'] = input("Who won? Be honest!")
+            leader['name'] = input("Who won? Be honest! \n")
         print(f"{leader['name']} is the winner! Congrats!")
 
         return None

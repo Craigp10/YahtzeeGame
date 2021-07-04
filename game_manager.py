@@ -7,7 +7,7 @@ import Player
 
 def createPlayers():
     players = []
-    player_names = input("What are players names? First names and put space in between")
+    player_names = input("What are players names? First names and put space in between \n")
     player_names = player_names.split()
     for player in player_names:
         player = Player.Player(player, 0, ["One", "Two", "Three",
