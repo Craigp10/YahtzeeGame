@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efe6970c-3d72-4d19-8633-8dba96f23d17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client_communicate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/Player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scoring.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yahtzee.py" beforeDir="false" afterPath="$PROJECT_DIR$/Yahtzee.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

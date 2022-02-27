@@ -1,11 +1,14 @@
-
-import Yahtzee
-
 import Player
 
 
+class Yahtzee(self):
+  def __init__(self):
+    self.self = self
+    self.players = self.getPlayers(self)
+    self.rounds = self.getRounds(self)
+    self.startGame(self)
 
-def createPlayers():
+  def getPlayers(self) -> list:
     players = []
     player_names = input("What are players names? First names and put space in between \n")
     player_names = player_names.split()
@@ -18,16 +21,16 @@ def createPlayers():
 
     return players
 
-def main():
-    '''Main - runs this game'''
-    players = createPlayers()
-    print('Our players for the game! ',players)
-    print("Unless you're picking a score to score with, please only enter #'s for rounds and dice")
-    new_game = Yahtzee.Yahtzee(players)
-    new_game.GameStart()
-    new_game.decideWinner()
+  def getRounds(self) -> list:
+    rounds = ""
+    while (type(rounds) != int or rounds < 0 or rounds > 13):
+      rounds = input("How many rounds would you like to play? ")
+    return rounds
 
+  def startGame(self) -> None:
+    turn = 0
+    while turn < self.rounds:
+        # for player in self.players:
+        #     player.TakeTurn()
+        turn += 1
     return None
-
-if __name__ == "__main__":
-    main()
