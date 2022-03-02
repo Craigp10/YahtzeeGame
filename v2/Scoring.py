@@ -13,8 +13,6 @@ class Scoring:
   def grabScore(self, chooseScore:str) -> int:
     score = self.scoreCard[chooseScore]
     return score
-
-
   
   def updateDice(self,newDiceList):
     self.diceList = newDiceList
