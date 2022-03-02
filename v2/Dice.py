@@ -9,7 +9,6 @@ class Dice:
   def getValue(self) -> int:
       return self.value
 
-  
   def roll(self) -> None:
       self.value = random.randint(1, 6) * 10 // 10
       return

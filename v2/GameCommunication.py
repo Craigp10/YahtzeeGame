@@ -3,7 +3,6 @@
 class GameCommunication:
   def __init__(self):
     self.self= self
-
   
   def printStatement(self, statement: str) -> None:
     print(statement)

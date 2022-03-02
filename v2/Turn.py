@@ -12,9 +12,7 @@ class Turn:
     self.rollAllDice()
     self.scoring = Scoring.Scoring([dice.value for dice in self.dice], self.player.getUnusedScoreCard())
     self.gc.printStatement(f"{self.player.name} is taking turn...")
-
-    #turn is initiated by Game each round for each player
-    #workflow of a turn consist of 
+    
     '''
       1. rolling dice
       2. player can decide to score with the rolled dice or reroll with keeping selected dice

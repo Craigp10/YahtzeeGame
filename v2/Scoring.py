@@ -96,7 +96,6 @@ class Scoring:
       
     return 0
       
-
   def StraightScores(self, count: int, score: int) -> int:
       '''Returns scores for the straight scores. Given count to check for and value to return'''
       straightList = self.RemoveRepeatDice(self.diceList)
@@ -154,10 +153,3 @@ class Scoring:
 
   def __repr__(self) -> str:
       return f"{self.scoreCard}"
-
-a = Scoring([5,5,5,5,5],["One", "Two", "Three",
-                                           "Four", "Five", "Six", "Small Straight", "Big Straight",
-                                           "Three of A Kind","Four of A Kind","Full House",
-                                           "Yahtzee", "Chance"])
-
-# print(a.getScores())                                        

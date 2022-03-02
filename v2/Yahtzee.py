@@ -50,6 +50,3 @@ class Yahtzee():
     
     print(f"WINNER {leader} with a score of {leaderScore}")
     return None
-
-
-a = Yahtzee(gc.GameCommunication())

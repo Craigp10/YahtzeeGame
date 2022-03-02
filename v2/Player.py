@@ -19,7 +19,6 @@ class Player:
       # "Full House": (0, false),
       # "Yahtzee":(0, false),
       # "Chance": (0, false)
-    
 
   def getScore(self) -> int:
     return self.score
