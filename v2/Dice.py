@@ -14,7 +14,5 @@ class Dice:
       self.value = random.randint(1, 6) * 10 // 10
       return
 
-
-
   def __repr__(self):
     return f"{self.value}"
