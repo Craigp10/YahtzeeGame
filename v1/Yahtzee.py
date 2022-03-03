@@ -2,7 +2,7 @@
 
 
 
-import v1.Player as Player, time
+import Player as Player, time
 
 
 

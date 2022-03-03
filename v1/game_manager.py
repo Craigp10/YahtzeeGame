@@ -1,7 +1,7 @@
 
-import v1.Yahtzee as Yahtzee
+import Yahtzee as Yahtzee
 
-import v1.Player as Player
+import Player as Player
 
 
 

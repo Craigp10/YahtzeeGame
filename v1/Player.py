@@ -2,7 +2,7 @@
 
 import random
 # from client_communicate import Client_Communicate as cc
-import v1.Scoring as Scoring
+import Scoring as Scoring
 
 
 
