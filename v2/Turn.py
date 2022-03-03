@@ -12,7 +12,7 @@ class Turn:
     self.rollAllDice()
     self.scoring = Scoring.Scoring([dice.value for dice in self.dice], self.player.getUnusedScoreCard())
     self.gc.printStatement(f"{self.player.name} is taking turn...")
-    
+    self.sortDice()
     '''
       1. rolling dice
       2. player can decide to score with the rolled dice or reroll with keeping selected dice
@@ -22,7 +22,6 @@ class Turn:
 
   def handleTurn(self):
     while(self.rolls < 3):
-      self.sortDice()
       self.gc.printStatement("Here are your scores choices with the currently rolled dice")
       self.printCurrentScores()
       self.printDice()
@@ -38,6 +37,7 @@ class Turn:
           [self.rollDice(index - 1) for index in reRollDice]
       #pick dice to reroll repeat process... return score and choosen score
       self.rolls += 1
+      self.sortDice()
       self.scoring.updateDice([dice.value for dice in self.dice])
     self.printCurrentScores()
     return self.makeDecision()
