@@ -96,34 +96,6 @@ class Scoring:
       
     return 0
       
-  def StraightScores(self, count: int, score: int) -> int:
-      '''Returns scores for the straight scores. Given count to check for and value to return'''
-      straightList = self.RemoveRepeatDice(self.diceList)
-      # print("STRAINT SCORES",straightList)
-      if len(straightList) < count:
-          return 0
-      for diceIndex in range(1, len(straightList)):
-          counter = 1
-          isStraight = self.recursiveStraightCheck(straightList, diceIndex, counter, count)
-          if isStraight:
-              return score
-          else:
-              return 0
-
-  def recursiveStraightCheck(self, diceList, diceIndex:int, counter: int, count:int) -> bool:
-      '''Called with StraightScores to check for a straight with each dice iteration through diceList'''
-      try:
-          if counter == count:
-              return True
-          elif (int(diceList[diceIndex]) - int(diceList[diceIndex - 1])) == 1:
-              counter += 1
-              diceIndex += 1
-              return self.recursiveStraightCheck(diceList, diceIndex, counter, count)
-          else:
-              return False
-
-      except IndexError:
-          return False
 
   def FullHouseScore(self) -> int:
       '''Returns score for Full House score'''
