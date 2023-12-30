@@ -31,6 +31,8 @@ class Yahtzee():
 
   def startGame(self) -> None:
     turn = 0
+    #  TODO: It can be cancelled at any input by typing 'q'
+    self.gc.printStatement("Beginning game!")
     while turn < self.rounds:
         #Turn.Turn()
         for player in self.players:

@@ -8,6 +8,10 @@ class GameCommunication:
     print(statement)
 
   def stringInputstatement(self, statement: str) -> str:
+    # Add quit functionality
+    # response = input(statement)
+    # if response.lower() == "q": 
+    #     KeyboardInterrupt("Game is cancelled")
     return input(statement)
 
   def numberInputstatement(self, statement: str) -> int:
@@ -15,6 +19,9 @@ class GameCommunication:
     while type(response) != int:
       try:
        response = int(input(statement))
+       # TODO: Add quit functionality.
+      #  if response.lower() == "q": 
+      #   raise KeyboardInterrupt("Game is cancelled")
       except:
         response = ""
     return response
@@ -23,4 +30,7 @@ class GameCommunication:
     response = ""
     while (response != 'y' and response != 'n'):
       response = input(statement).lower()
+      # TODO: Add quit functionality
+      # if response.lower() == "q": 
+      #   KeyboardInterrupt("Game is cancelled")
     return True if response == 'y' else False 
