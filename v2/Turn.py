@@ -11,7 +11,7 @@ class Turn:
     self.dice = [Dice.Dice(6) for _ in range(diceCount)]
     self.rollAllDice()
     self.scoring = Scoring.Scoring([dice.value for dice in self.dice], self.player.getUnusedScoreCard())
-    self.gc.printStatement(f"{self.player.name} is taking turn...")
+    self.gc.printStatement(f"{self.player.name} is taking turn...\n")
     self.sortDice()
     '''
       1. rolling dice
@@ -22,10 +22,11 @@ class Turn:
 
   def handleTurn(self):
     while(self.rolls < 3):
-      self.gc.printStatement("Here are your scores choices with the currently rolled dice")
-      self.printCurrentScores()
+      self.gc.printStatement(f" {self.player.name} rolled...")
       self.printDice()
-      if self.gc.boolInputstatement("Would you like to score (Y) or re roll dice (N)? Y - score, N - Reroll "):
+      self.gc.printStatement("Here are the scores choices with the currently rolled dice")
+      self.printCurrentScores()
+      if self.gc.boolInputstatement("Would you like to score (Y) or re roll dice (N)? Y - score, N - Reroll: "):
         #break out and handle scoring
         break
       else:
@@ -39,7 +40,7 @@ class Turn:
       self.rolls += 1
       self.sortDice()
       self.scoring.updateDice([dice.value for dice in self.dice])
-    self.printCurrentScores()
+    # self.printCurrentScores()
     return self.makeDecision()
 
   def sortDice(self):

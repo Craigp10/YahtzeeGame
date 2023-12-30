@@ -10,8 +10,10 @@ class Yahtzee():
 
   def getPlayers(self) -> list:
     players = []
-    player_names = self.gc.stringInputstatement("What are players names? First names and put space in between \n")
-    player_names = player_names.split()
+    player_names = ""
+    while len(player_names) < 1 or len(player_names) > 4:
+      player_names = self.gc.stringInputstatement("What are players names? First names and put space in between. Between 1 - 4 players may play. \n")
+      player_names = player_names.split()
     for player in player_names:
         player = Player.Player(player, 0, ["One", "Two", "Three",
                                            "Four", "Five", "Six", "Small Straight", "Big Straight",
@@ -24,7 +26,7 @@ class Yahtzee():
   def getRounds(self) -> list:
     rounds = -1
     while (rounds < 0 or rounds > 13):
-      rounds = int(self.gc.numberInputstatement("How many rounds would you like to play? "))
+      rounds = int(self.gc.numberInputstatement("How many rounds would you like to play? \n"))
     return rounds
 
   def startGame(self) -> None:
@@ -32,7 +34,7 @@ class Yahtzee():
     while turn < self.rounds:
         #Turn.Turn()
         for player in self.players:
-          # print('p',player)
+          self.gc.printStatement("New Turn \n\n")
           turnInt = Turn.Turn(player, 5, self.gc)
           player.updateScore(turnInt.handleTurn())
         turn += 1
@@ -48,7 +50,7 @@ class Yahtzee():
         leader = player.name
         leaderScore = player.score
     
-    print(f"WINNER {leader} with a score of {leaderScore}")
+    print(f"*** WINNER {leader} with a score of {leaderScore} ***")
     return None
 
 
